@@ -15,14 +15,23 @@ Make a cheat sheet for yourself: a list of at least **ten** commands and what th
 
 > > 
 `pushd <dirname>` : save current dir and go to <dirname>
+
 `popd`: go to dir in stack
+
 `dirs`: check dirs in stack
+
 `cp`: copy file
+
 `mkdir -p a/b/c`: make new directories recursively
+
 `|`: pipe
+
 `env`: show environment variables
+
 `touch`: new file
+
 `find . -name "*.txt"`: find .txt files
+
 `exit`: exit terminal
 
 
@@ -43,11 +52,17 @@ What do the following commands do:
 
 > > 
 `ls`: list files in the current dir
+
 `ls -a`: list files in the current dir, including hidden files
+
 `ls -l`: list files in the current dir, list details
+
 `ls -lh`: list files in the current dir, list details, human readable file types
+
 `ls -lah`: list files in the current dir, list details, human readable file types, including hidden files
+
 `ls -t`: list files in the current dir, sort by time
+
 `ls -Glp`: list files in the current dir, list details, show '/' if it's a dir, color output
 
 
@@ -59,10 +74,15 @@ Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) 
 
 > > 
 `ls -lt`: list includes modified time and details
+
 `ls -lu`: list includes last access time and details
+
 `ls -lU`: list includes created time and details
+
 (add -r tag to reverse order)
+
 `ls -F`: display more symbols '/' for dir, @ for symlink
+
 `ls -R`: show files recursively
 
 
@@ -75,5 +95,6 @@ What does `xargs` do? Give an example of how to use it.
 
 > > execute passes args . I use it to catch Zombie process and kill
 
+```
 ps ux |awk -F' ' '{if ($8~/Z/) print $2}'|xargs -n1 -p kill
-
+```
