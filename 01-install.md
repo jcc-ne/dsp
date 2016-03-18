@@ -46,13 +46,19 @@ cross-platform.
 
 Did you install Python 2 or 3? Why?  
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> python 2.  In anaconda it has more consistent packages.
 
 ###Q2. Which Python Version Installed   
 
 How can you check the version of Python installed if you happen to be on an unfamiliar computer?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> command line:
+```python -V
+```
+or in python interpreter
+```import os
+os.__version__
+```
 
  
 
