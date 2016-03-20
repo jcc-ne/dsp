@@ -58,7 +58,7 @@ How can you check the version of Python installed if you happen to be on an unfa
 or in python interpreter
 
 ```import os
-os.__version__
+os.__file__
 ```
 
  
