@@ -12,15 +12,25 @@ For quick and easy interactive practice with Python, many people enjoy [Codecade
 
 How are Python lists and tuples similar and different? Which will work as keys in dictionaries? Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> They are both sequence types.  The difference: tuples are immutable, lists are mutable (requires more memory).  Also tuples are generally heterogeneous (dealing with different kinds element) and lists are generally homogeneous.
 
+>> Only tuples can work as keys in dict because dict only accept immutable types as keys.
 ---
 
 ###Q2. Lists &amp; Sets
 
 How are Python lists and sets similar and different? Give examples of using both. How does performance compare between lists and sets for finding an element. Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> They are both sequence types.  The difference is, set does not contain duplicated elements. For example:
+
+```
+>>> list_a = ['a', 'c', 'c', 'f', 'f', 'h']
+>>> set(list_a)
+
+{'a', 'c', 'f', 'h'}
+```
+
+>> finding an element in a set is more efficient than in a list for large set of data because it sets up a hash table.
 
 ---
 
@@ -28,15 +38,49 @@ How are Python lists and sets similar and different? Give examples of using both
 
 Describe Python's `lambda`. What is it, and what is it used for? Give at least one example, including an example of using a `lambda` in the `key` argument to `sorted`.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> lambda functions are the anonymous functions created at runtime.
 
+>> It is usually used in conjunction with functions like map, filter, sort.  For example:
+
+```
+>>> map(lambda x: x + 1, [1, 2, 3, 4])
+[2, 3, 4, 5]
+
+>>> filter(lambda x: x > 2, [1, 2, 3, 4])
+[3, 4]
+
+>>> list_a = [1, 2, 3, 4]
+>>> list_a.sort(key=lambda x: -x)
+>>> list_a
+[4, 3, 2, 1]
+
+```
 ---
 
 ###Q4. List Comprehension, Map &amp; Filter
 
 Explain list comprehensions. Give examples and show equivalents with `map` and `filter`. How do their capabilities compare? Also demonstrate set comprehensions and dictionary comprehensions.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>>  list comprehension is a quick way to create list from some operations.
+
+>> For example, doubling each element, find even elements in a list...
+
+```
+list_a = [1, 2, 3, 4]
+
+# list comprehension
+[i * 2 for i in list_a]
+
+# map
+map(lambda x: x * 2, list_a)
+
+# list comprehension
+[i for i in list_a if i % 2 == 0]
+
+# filter
+filter(lambda x: x % 2 == 0, list_a)
+
+```
 
 ---
 
@@ -51,23 +95,7 @@ date_start = '01-02-2013'
 date_stop = '07-28-2015'
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE (answer will be in number of days)
-
-b.  
-```
-date_start = '12312013'  
-date_stop = '05282015'  
-```
-
->> REPLACE THIS TEXT WITH YOUR RESPONSE (answer will be in number of days)
-
-c.  
-```
-date_start = '15-Jan-1994'      
-date_stop = '14-Jul-2015'  
-```
-
->> REPLACE THIS TEXT WITH YOUR RESPONSE  (answer will be in number of days)
+>> 937
 
 Place code in this file: [q5_datetime.py](python/q5_datetime.py)
 

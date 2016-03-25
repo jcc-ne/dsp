@@ -18,7 +18,11 @@ def donuts(count):
     >>> donuts(99)
     'Number of donuts: many'
     """
-    raise NotImplementedError
+    # raise NotImplementedError
+    if count < 10:
+        return 'Number of donuts: {}'.format(count)
+    else:
+        return 'many'
 
 
 def both_ends(s):
@@ -37,7 +41,8 @@ def both_ends(s):
     >>> both_ends('xyz')
     'xyyz'
     """
-    raise NotImplementedError
+    # raise NotImplementedError
+    return s[0:2] + s[-2] + s[-1]
 
 
 def fix_start(s):
@@ -56,7 +61,9 @@ def fix_start(s):
     >>> fix_start('donut')
     'donut'
     """
-    raise NotImplementedError
+    # raise NotImplementedError
+    l1 = s[0]
+    return l1 + s.replace(l1, '*')[1:]
 
 
 def mix_up(a, b):
@@ -74,7 +81,13 @@ def mix_up(a, b):
     >>> mix_up('pezzy', 'firm')
     'fizzy perm'
     """
-    raise NotImplementedError
+    # raise NotImplementedError
+    l2a = a[:2]
+    l2b = b[:2]
+    ra = a[2:]
+    rb = b[2:]
+
+    return '{} {}'.format(l2b + ra, l2a + rb)
 
 
 def verbing(s):
@@ -91,7 +104,13 @@ def verbing(s):
     >>> verbing('do')
     'do'
     """
-    raise NotImplementedError
+    # raise NotImplementedError
+    if len(s) < 3:
+        return s
+    elif s.endswith('ing'):
+        return s + 'ly'
+    else:
+        return s + 'ing'
 
 
 def not_bad(s):
@@ -111,7 +130,23 @@ def not_bad(s):
     >>> not_bad("It's bad yet not")
     "It's bad yet not"
     """
-    raise NotImplementedError
+    # raise NotImplementedError
+    words = s.split()
+
+    w = ''
+    wlist = []
+    wnotlist = []
+    while w != 'not' and words:
+        wlist.append(w)
+        w = words.pop(0)
+    while w != 'bad' and words:
+        wnotlist.append(w)
+        w = words.pop(0)
+
+    if wnotlist and (words or w == 'bad'):
+        return ' '.join(wlist + ['good'] + words).strip()
+    else:
+        return s
 
 
 def front_back(a, b):
@@ -130,4 +165,7 @@ def front_back(a, b):
     >>> front_back('Kitten', 'Donut')
     'KitDontenut'
     """
-    raise NotImplementedError
+    # raise NotImplementedError
+    h_a = len(a) / 2 + len(a) % 2
+    h_b = len(b) / 2 + len(b) % 2
+    return a[:h_a] + b[:h_b] + a[h_a:] + b[h_b]
