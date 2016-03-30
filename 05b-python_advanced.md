@@ -30,7 +30,6 @@ This data is available in this file:  [faculty.csv](python/faculty.csv)
  Sc.D.                    5
  0                         1
  Name: name, dtype: int64
-	   
 ```
 
 
@@ -144,12 +143,10 @@ faculty_dict = { 'Ellenberg': [\
 Print the first 3 key and value pairs of the dictionary:
 
 >> 
-
 ```
 Bellamy [[' ScD' 'Associate Professor' 'bellamys@mail.med.upenn.edu']]
 Bilker [[' PhD' 'Professor' 'warren@upenn.edu']]
 Bryan [[' PhD' 'Assistant Professor' 'bryanma@upenn.edu']]
-
 ```
 ####Q7.  The previous dictionary does not have the best design for keys.  Create a new dictionary with keys as:
 
@@ -169,7 +166,6 @@ Print the first 3 key and value pairs of the dictionary:
 ('A.', 'Localio') [[' JD MA MPH MS PhD' 'Associate Professor' 'rlocalio@upenn.edu']]
 ('Alisa', 'Stephens') [[' PhD' 'Assistant Professor' 'alisaste@mail.med.upenn.edu']]
 ('Andrea', 'Troxel') [[' ScD' 'Professor' 'atroxel@mail.med.upenn.edu']]
-
 ```
 
 ####Q8.  It looks like the current dictionary is printing by first name.  Sort by last name and print the first 3 key and value pairs.  
