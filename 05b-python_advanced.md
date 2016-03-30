@@ -1,6 +1,6 @@
 ## Advanced Python    
 
-###Regular Expressions, Dictionary, Writing to CSV File  
+### Regular Expressions, Dictionary, Writing to CSV File  
 
 This question has multiple parts, and will take **20+ hours** to complete, depending on your python proficiency level.  Knowing these skills will be extremely beneficial during the first few weeks of the bootcamp.
 
@@ -14,10 +14,10 @@ This data is available in this file:  [faculty.csv](python/faculty.csv)
 
 --- 
 
-###Part I - Regular Expressions  
+### Part I - Regular Expressions  
 
 
-####Q1. Find how many different degrees there are, and their frequencies: Ex:  PhD, ScD, MD, MPH, BSEd, MS, JD, etc.
+#### Q1. Find how many different degrees there are, and their frequencies: Ex:  PhD, ScD, MD, MPH, BSEd, MS, JD, etc.
 
 >> 
 ```
@@ -31,11 +31,10 @@ This data is available in this file:  [faculty.csv](python/faculty.csv)
  0                         1
  Name: name, dtype: int64
 	   
- ```
-	  
+```
 
 
-####Q2. Find how many different titles there are, and their frequencies:  Ex:  Assistant Professor, Professor
+#### Q2. Find how many different titles there are, and their frequencies:  Ex:  Assistant Professor, Professor
 
 >> 
 ```
@@ -118,6 +117,7 @@ Place your code in this file: [advanced_python_csv.py](python/advanced_python_cs
 The emails.csv file you create should be added and committed to your forked repository.
 
 Your file, emails.csv, will look like this:
+
 ```
 bellamys@mail.med.upenn.edu
 warren@upenn.edu
@@ -144,6 +144,7 @@ faculty_dict = { 'Ellenberg': [\
 Print the first 3 key and value pairs of the dictionary:
 
 >> 
+
 ```
 Bellamy [[' ScD' 'Associate Professor' 'bellamys@mail.med.upenn.edu']]
 Bilker [[' PhD' 'Professor' 'warren@upenn.edu']]
