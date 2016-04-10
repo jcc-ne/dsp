@@ -1,6 +1,7 @@
 # blue men question
 import scipy.stats as st
 
+
 def convertToCm(ft=0.0, inch=0.0):
     return ft * 12 * 2.54 + inch * 2.54
 

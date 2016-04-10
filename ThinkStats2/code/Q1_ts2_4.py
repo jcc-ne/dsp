@@ -1,6 +1,7 @@
 import nsfg
 import numpy as np
 
+
 # -- read data into frame --
 df = nsfg.ReadFemPreg()
 

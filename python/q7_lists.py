@@ -109,6 +109,25 @@ def linear_merge(list1, list2):
     ['aa', 'aa', 'aa', 'bb', 'bb']
     """
     # raise NotImplementedError
-    list3 = list1 + list2
-    list3.sort()
+
+    # -- check if lists are sorted --
+    if list1 != sorted(list1) or list2 != sorted(list2):
+        raise Exception('Please pass sorted lists')
+
+    list3 = []
+    i1 = list1.pop(0)
+    i2 = list2.pop(0)
+    while i1 or i2:
+        while i1 and (i2 >= i1 or i2 is None):
+            list3.append(i1)
+            try:
+                i1 = list1.pop(0)
+            except IndexError:
+                i1 = None
+        while i2 and (i1 >= i2 or i1 is None):
+            list3.append(i2)
+            try:
+                i2 = list2.pop(0)
+            except IndexError:
+                i2 = None
     return list3

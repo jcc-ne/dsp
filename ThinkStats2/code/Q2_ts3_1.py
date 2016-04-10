@@ -14,6 +14,7 @@ def BiasedPmf(pmf0):
 def readNplotNUMKDHH(dctfile='2002FemResp.dct',
                      datfile='2002FemResp.dat.gz',
                      compression='gzip'):
+    """ read data to fram and plot NUMKDHH PMF"""
     dct = thinkstats2.ReadStataDct(dctfile)
     df = dct.ReadFixedWidth(datfile, compression=compression)
 
